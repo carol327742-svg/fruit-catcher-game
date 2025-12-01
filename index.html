@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>水果接接乐 - 自定义版本</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+    <h1>🍎 水果接接乐 🍊</h1>
+
+    <div class="game-container">
+        <div class="score-board" style="display: none;">
+            得分: <span id="score">0</span>
+        </div>
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+
+        <div id="startScreen">
+            <button id="startButton">开始游戏</button>
+            <p id="loadingMessage">正在加载美术素材...</p>
+        </div>
+
+        <div class="controls">
+            <button id="restartButton" style="display: none;">重新开始</button>
+            <button id="pauseButton" style="display: none;">暂停</button>
+        </div>
+        <p class="game-message" id="gameMessage"></p>
+    </div>
+
+    <script src="game.js"></script> 
+</body>
+</html>

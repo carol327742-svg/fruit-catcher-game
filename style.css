@@ -1,0 +1,150 @@
+/* style.css */
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #e0ffe0; /* 浅绿色背景 */
+    color: #333;
+}
+
+h1 {
+    color: #2e8b57;
+    margin-bottom: 20px;
+}
+
+.game-container {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    position: relative; /* 核心：让子元素（如startScreen）可以定位 */
+}
+
+.score-board {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #007700;
+    margin-bottom: 15px;
+}
+
+#gameCanvas {
+    background-color: #f7fff7; 
+    border: 2px solid #2e8b57;
+    border-radius: 10px;
+    display: block; 
+    margin: 0 auto;
+}
+
+/* --- 游戏开始屏幕样式 --- */
+#startScreen {
+    position: absolute;
+    top: 20px; 
+    left: 20px; 
+    width: 800px; /* 匹配Canvas宽度 */
+    height: 600px; /* 匹配Canvas高度 */
+    
+    background-image: url('assets/game_start_background.png'); 
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    z-index: 10; 
+
+    display: flex;
+    flex-direction: column;
+    /* !!! 修改：将内容推到底部，以定位按钮 !!! */
+    justify-content: flex-end; 
+    align-items: center;
+    padding-bottom: 80px; /* 抬高按钮，使其位于下半部分 */
+}
+
+#startScreen button {
+    padding: 20px 40px;
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+    background-color: #008000; 
+    border: 5px solid #fff;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0 8px #006400;
+    transition: all 0.2s;
+    margin-top: 20px;
+}
+
+#startScreen button:hover {
+    background-color: #006400;
+    transform: translateY(-2px);
+    box-shadow: 0 10px #004d00;
+}
+
+#startScreen button:active {
+    transform: translateY(4px);
+    box-shadow: 0 4px #004d00;
+}
+
+#loadingMessage {
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-bottom: 10px; /* 确保它在按钮上方 */
+}
+
+
+/* --- 游戏控制按钮和消息 --- */
+.controls {
+    margin-top: 20px;
+}
+
+.controls button {
+    padding: 12px 25px;
+    margin: 0 10px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: white;
+    background-color: #4CAF50; 
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    box-shadow: 0 4px #2e8b57;
+}
+
+.controls button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 6px #2e8b57;
+}
+
+.controls button:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px #2e8b57;
+}
+
+#pauseButton {
+    background-color: #f44336; 
+    box-shadow: 0 4px #d32f2f;
+}
+
+#pauseButton:hover {
+    background-color: #da190b;
+    box-shadow: 0 6px #d32f2f;
+}
+
+#pauseButton:active {
+    box-shadow: 0 2px #d32f2f;
+}
+
+.game-message {
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: #e65100;
+    font-weight: bold;
+    min-height: 25px; 
+}
