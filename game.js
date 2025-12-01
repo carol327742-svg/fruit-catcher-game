@@ -38,7 +38,7 @@ const LOSE_SCORE = -100;
 
 // --- 图片资源管理 ---
 let imagesLoaded = 0;
-const totalImages = 13; 
+const totalImages = 11; 
 const gameImages = {}; 
 
 const imagePaths = {
@@ -49,8 +49,6 @@ const imagePaths = {
     apple_spoiled: 'assets/apple_spoiled.png',
     orange_fresh: 'assets/orange_fresh.png',
     orange_spoiled: 'assets/orange_spoiled.png',
-    avocado_fresh: 'assets/avocado_fresh.png',
-    avocado_spoiled: 'assets/avocado_spoiled.png',
     broccoli_fresh: 'assets/broccoli_fresh.png',
     broccoli_spoiled: 'assets/broccoli_spoiled.png',
     tomato_fresh: 'assets/tomato_fresh.png',
@@ -60,7 +58,6 @@ const imagePaths = {
 const fruitTypes = [
     { name: 'apple', width: fruitSize, height: fruitSize },
     { name: 'orange', width: fruitSize, height: fruitSize },
-    { name: 'avocado', width: fruitSize, height: fruitSize * 1.4 }, 
     { name: 'broccoli', width: fruitSize, height: fruitSize },
     { name: 'tomato', width: fruitSize, height: fruitSize },
 ];
@@ -338,4 +335,5 @@ loadImages(() => {
 
 startButton.style.visibility = 'hidden';
 startScreen.style.display = 'flex';
+
 scoreBoard.style.display = 'none';
